@@ -3,10 +3,12 @@
 
 タブの音量をコントロールするChrome拡張機能です
 
+ダウンロードは[こちら](https://github.com/mujurin1/PerfectAudioController/releases)から
+
 ## TODO
 * [x] 複数のタブの音量を管理する
 * [x] コントロールを適切に終了する
-* [x] [ショートカットキー](chrome://extensions/shortcuts)で操作する
+* [x] ショートカットキーで操作する (chrome://extensions/shortcuts)
   * [ ] ショートカットキーで操作した時に変化をユーザーに伝える
   * ショートカットキー操作時にそのタブの全面に薄く表示する感じが理想
 * [ ] バッジに音量を表示する

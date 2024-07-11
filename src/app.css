@@ -1,0 +1,17 @@
+body {
+  width: 320px;
+  /* width: 600px; */
+  min-height: 400px;
+}
+
+p {
+  margin: 0;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 200,
+    "opsz" 40;
+}

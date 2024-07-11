@@ -1,0 +1,21 @@
+{
+  // "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"skipLibCheck": true,
+		"sourceMap": true,
+		"strict": true,
+		"module": "ESNext",
+		// "moduleResolution": "NodeNext",
+    
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+  },
+  "include": ["src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "public/offscreen.ts"],
+  // "references": [{ "path": "./tsconfig.node.json" }]
+}

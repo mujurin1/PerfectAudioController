@@ -38,7 +38,7 @@ chrome.commands.onCommand.addListener(async (_command, tab) => {
       } satisfies SetAudio);
 
       if (result == null || result === "NO_RESPONSE") {
-        console.log("create stream");
+        // console.log("create stream");
         const streamId = await chromeExtends.getMediaStreamId({
           targetTabId: tab.id!,
         });

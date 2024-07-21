@@ -14,7 +14,7 @@ export async function sendMessage<T extends PAMMessageResponse = "NO_RESPONSE">(
     if (tryCount < 3) {
       await popupStore.reload();
 
-      console.log(popupStore.currentTabState.manage);
+      // console.log(popupStore.currentTabState.manage);
       if (popupStore.currentTabState.manage) {
         await startManage(popupStore.currentTab.id!, popupStore.currentTabState.audio);
       }

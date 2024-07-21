@@ -24,7 +24,7 @@
  *   * バックグラウンドで動作する非表示なDOMを持つワーカー(?)
  *   * Chrome Extends API は `chrome.runtime` のみ使用可能
  *   * background と違い終了しない限りは動作し続ける
- *     (理由: AUDIO_PLAYBACK の場合を除く)
+ *     (`AUDIO_PLAYBACK` の場合を除く)
  */
 
 

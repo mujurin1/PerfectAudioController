@@ -168,20 +168,20 @@ function changeVolume(state: TabState, audioVolume: AudioVolume | ExtensionComma
 
 function changeVolumeCommand(state: TabState, command: ExtensionCommand) {
   if (
-    state.audio.volume < 1 ||
-    (state.audio.volume === 1 && command === "Volume Down")
+    state.audio.boost > 1 ||
+    (state.audio.volume === 1 && command === "Volume Up")
   ) {
+    // change boost
+    const changeValue = command === "Volume Up" ? 0.5 : -0.5;
+    state.audio.boost += changeValue;
+    if (state.audio.boost < 0) state.audio.boost = 0;
+    else if (state.audio.boost > MAX_BOOST) state.audio.boost = MAX_BOOST;
+  } else {
     // change volume
     // 0~1 -> 0~10.0
     const value = state.audio.volume / 0.1;
     const changeValue = command === "Volume Up" ? 0.6 : - 0.6;
     state.audio.volume = Math.round(value + changeValue) / 10;  // *0.1 だと誤差が出るので
     if (state.audio.volume < 0) state.audio.volume = 0;
-  } else {
-    // change boost
-    const changeValue = command === "Volume Up" ? 0.5 : -0.5;
-    state.audio.boost += changeValue;
-    if (state.audio.boost < 0) state.audio.boost = 0;
-    else if (state.audio.boost > MAX_BOOST) state.audio.boost = MAX_BOOST;
   }
 }

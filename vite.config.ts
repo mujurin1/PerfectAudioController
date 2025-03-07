@@ -6,9 +6,10 @@ import { defineConfig } from "vite";
 // https://crxjs.dev/vite-plugin/concepts/manifest
 const manifest = defineManifest({
   manifest_version: 3,
-  name: "Perfect Audio Controller",
-  version: "1.0.0",
-  permissions: ["tabs", "tabCapture", "scripting", "offscreen", "windows", "activeTab", "commands"],
+  name: "Perfect Window FullScreen and Audio Controller",
+  description: "Window FullScreen and Audio Controller",
+  version: "1.0.1",
+  permissions: ["tabs", "tabCapture", "offscreen"],
   action: {
     default_popup: "popup.html",
   },
